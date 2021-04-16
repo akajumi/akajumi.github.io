@@ -1,0 +1,52 @@
+button {
+  cursor: pointer;
+}
+#sin-notificaciones,
+#con-notificaciones {
+  display: none;
+}
+.visible {
+  display: block !important;
+}
+#consola {
+  background: #000;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+#consola-modal {
+  background: #ccc;
+  border-radius: 5px;
+  color: #000;
+  padding: 5px 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#notification-modal {
+  background: #ccc;
+  border-radius: 15px;
+  color: #000;
+  display: block;
+  margin: 0 0 0 -20%;
+  padding: 15px 20px;
+  position: fixed;
+  left: 50%;
+  top: 100px;
+  text-align: center;
+  width: 40%;
+}
+#notification-modal button {
+  margin: 10px;
+}
+#boton-cerrar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#notification-modal {
+  display: none;
+}

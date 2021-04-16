@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-touch-icon--76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icons/apple-touch-icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/icons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <title>Demo API notificaciones HTML 5</title>
+</head>
+<body>
+  <div>
+    <h1>Envio de notificaciones</h1>
+    <p>Basado en el vídeo de YouTube <a href="https://www.youtube.com/watch?v=0S-1te9dRoQ" target="_blank">Mi primer notificacion en HTML5 - HTML5 NOTIFICATIONS API</a></p>
+    <p>Testear en <a href="https://jumi.php72.adimedia.local/">https://jumi.php72.adimedia.local/</a></p>
+    <div id="sin-notificaciones" class="oculto">
+      <p><strong>No soporta notificaciones.</strong></p>
+    </div>
+    <div id="con-notificaciones">
+      <p>Lanzar notificación de prueba:</p>
+      <p><button id="lanzar-notificaciones">Enviar notificación</button></p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia tempus risus, eget dapibus justo. Integer eu
+      luctus ex. Proin nunc massa, ullamcorper interdum ante ac, sagittis euismod arcu. Nulla maximus at mi sit amet euismod.
+      Pellentesque vitae tortor quis lacus aliquet bibendum at a tortor. Cras at sapien eget ante aliquam congue vitae ac
+      odio. Aliquam nec sapien id dolor rhoncus pellentesque. Sed ut tempor libero. Nam magna arcu, tempus sed semper sed,
+      auctor quis neque. Etiam nec enim ut nibh consequat congue eu in est. Vestibulum ante ipsum primis in faucibus orci
+      luctus et ultrices posuere cubilia curae; Duis vehicula orci ex, eget hendrerit elit vulputate vel. In vitae turpis
+      hendrerit, congue lectus non, lacinia est.</p><p>
+        Cras viverra odio non leo tempor, convallis vulputate ipsum viverra. Pellentesque accumsan augue sit amet dui feugiat,
+        quis consequat felis maximus. Morbi feugiat tempus volutpat. Vivamus sodales, nisi sed posuere molestie, lectus arcu
+        fringilla enim, ac tempus sapien dolor id tellus. Sed quis commodo lorem. Vivamus scelerisque purus non neque
+        placerat,
+        et blandit eros molestie. Morbi a augue eu ex rhoncus feugiat. Phasellus vitae nisl nec nibh porta pharetra vel
+        porttitor metus. Donec at massa augue. Fusce non maximus ipsum, rutrum condimentum diam. In ipsum lectus, condimentum
+        vitae ultrices eu, mattis sit amet nisi. Aenean commodo, risus a dictum rhoncus, nisl ante facilisis tortor, at
+        ullamcorper lectus ipsum non ex. Integer a rutrum ante.</p>
+      <p>
+        Nam et rhoncus nulla. Aenean ultricies ex nec nunc rutrum dignissim. Donec mattis elit sit amet mollis fermentum. Ut
+        rutrum mattis nisi at aliquet. Duis eu lobortis risus. Nam gravida mauris et ultrices pulvinar. Vivamus ac ligula
+        venenatis, gravida sem id, malesuada elit. Quisque vel scelerisque nibh, in sodales risus. Nunc ullamcorper congue
+        ipsum
+        a imperdiet. Fusce condimentum dolor velit, non pretium lacus posuere quis. Etiam vel enim interdum enim porttitor
+        pretium nec non felis. Phasellus luctus nec lectus vitae venenatis.</p>
+      <p>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras eleifend luctus neque,
+        quis
+        accumsan orci iaculis a. Donec nec porttitor est. Morbi ullamcorper lectus eu libero finibus rhoncus. Etiam non nibh
+        efficitur, interdum nunc id, accumsan dui. Curabitur sit amet sem sed libero sagittis porttitor. Aenean vehicula metus
+        velit, ut tristique mauris tristique in. In porta sapien erat, eget varius libero euismod in. Nam efficitur vulputate
+        massa eu eleifend. Sed condimentum mauris sit amet nibh aliquet, ac molestie quam interdum. Aliquam commodo tortor sit
+        amet risus auctor ullamcorper.</p>
+      <p>
+        Vivamus et magna ipsum. Pellentesque dictum, ante quis faucibus hendrerit, lectus urna imperdiet neque, eu porta quam
+        quam in lectus. Nam elementum molestie orci eget accumsan. Nullam nec nibh vestibulum, facilisis lectus volutpat,
+        rhoncus justo. Maecenas ac cursus justo. Vivamus cursus sem et justo efficitur interdum convallis vehicula purus.
+        Vivamus sed venenatis libero, at accumsan nunc. Aenean eget enim finibus, elementum odio ac, feugiat felis. Fusce
+        gravida est in quam euismod, a consectetur lectus scelerisque. Fusce sit amet dui sed nibh congue euismod. Donec odio
+        sapien, condimentum non malesuada laoreet, euismod quis arcu. Nam eleifend non velit sed posuere. Praesent quis
+        placerat
+        tortor, eu semper ipsum. Donec nunc diam, viverra nec elementum sit amet, egestas id quam.</p>
+      <p>
+        Donec pretium condimentum mi nec maximus. Ut eget luctus mi. Quisque fringilla sem dui, vel condimentum mauris
+        accumsan
+        sit amet. Nulla eu leo quis purus luctus tincidunt. Ut nec porta tellus, egestas tristique ligula. Nam porttitor metus
+        a
+        risus aliquet, vitae scelerisque tortor viverra. In viverra efficitur nulla, at vehicula diam imperdiet ac. Nunc eu
+        massa id ligula hendrerit tempor. Suspendisse potenti. Duis vulputate ligula lorem, eu hendrerit erat tempor feugiat.
+        Suspendisse porttitor rutrum pellentesque.</p>
+      <p>
+        Sed lacinia ex eu felis faucibus, eu finibus ante mattis. Praesent placerat ex non commodo semper. Sed eleifend
+        accumsan
+        arcu ac ullamcorper. In ultrices lorem a elit volutpat sollicitudin. Mauris lectus dui, venenatis eu elementum non,
+        mattis sit amet mi. Curabitur sagittis ante suscipit consequat gravida. Vivamus vel dictum diam. Maecenas id dapibus
+        risus. Praesent mollis, quam quis feugiat posuere, turpis lorem convallis orci, et ultrices sapien elit non nulla.
+        Cras
+        quis tempor eros.</p>
+      <p>
+        Integer pulvinar odio id ipsum imperdiet consectetur a eu est. Nam sodales, magna at iaculis vulputate, quam urna
+        aliquam lectus, quis condimentum augue ante sed ipsum. In semper posuere aliquet. Sed sed mi ut lectus porta
+        pellentesque. Vivamus nec ultrices elit, vitae bibendum est. Mauris semper ante a neque laoreet euismod. In ac neque
+        nec
+        ipsum imperdiet commodo. Cras facilisis felis eu orci commodo ullamcorper. Fusce vestibulum maximus massa, suscipit
+        fermentum felis aliquam tincidunt. Nulla facilisi. Maecenas viverra rutrum mi a dapibus. Pellentesque molestie
+        venenatis
+        est, vitae sollicitudin orci cursus non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+        turpis egestas. Mauris consequat metus mauris, dapibus malesuada nulla ultrices id. Integer laoreet, turpis molestie
+        euismod molestie, neque nibh dapibus erat, id convallis libero nisi id massa.</p>
+      <p>
+        Nullam egestas quam placerat dolor finibus, ac tincidunt dui finibus. Pellentesque habitant morbi tristique senectus
+        et
+        netus et malesuada fames ac turpis egestas. Suspendisse potenti. Sed eget ullamcorper neque, rhoncus tempor enim.
+        Phasellus in sollicitudin neque. Vivamus nec eleifend nibh. Vivamus eu suscipit dui. Quisque nec leo ornare urna
+        maximus
+        euismod. Aenean condimentum tortor a ex hendrerit facilisis. Proin congue malesuada mi, nec pharetra purus feugiat in.
+        Phasellus ut vestibulum nulla. Integer auctor commodo elit, quis lacinia augue porttitor ut. Aenean vel urna est.</p>
+      <p>
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porta justo vitae
+        urna eleifend venenatis. Sed ornare ante eget urna eleifend varius. Mauris ullamcorper scelerisque interdum. Quisque
+        pretium sagittis ante, ut ultricies velit molestie a. Nulla libero lectus, condimentum interdum lacus vitae, auctor
+        aliquam ex. Vestibulum efficitur, nisi ac viverra vestibulum, neque mi auctor ante, et interdum leo sapien ac nibh.
+      </p><p>
+        Cras viverra odio non leo tempor, convallis vulputate ipsum viverra. Pellentesque accumsan augue sit amet dui feugiat,
+        quis consequat felis maximus. Morbi feugiat tempus volutpat. Vivamus sodales, nisi sed posuere molestie, lectus arcu
+        fringilla enim, ac tempus sapien dolor id tellus. Sed quis commodo lorem. Vivamus scelerisque purus non neque
+        placerat,
+        et blandit eros molestie. Morbi a augue eu ex rhoncus feugiat. Phasellus vitae nisl nec nibh porta pharetra vel
+        porttitor metus. Donec at massa augue. Fusce non maximus ipsum, rutrum condimentum diam. In ipsum lectus, condimentum
+        vitae ultrices eu, mattis sit amet nisi. Aenean commodo, risus a dictum rhoncus, nisl ante facilisis tortor, at
+        ullamcorper lectus ipsum non ex. Integer a rutrum ante.</p>
+      <p>
+        Nam et rhoncus nulla. Aenean ultricies ex nec nunc rutrum dignissim. Donec mattis elit sit amet mollis fermentum. Ut
+        rutrum mattis nisi at aliquet. Duis eu lobortis risus. Nam gravida mauris et ultrices pulvinar. Vivamus ac ligula
+        venenatis, gravida sem id, malesuada elit. Quisque vel scelerisque nibh, in sodales risus. Nunc ullamcorper congue
+        ipsum
+        a imperdiet. Fusce condimentum dolor velit, non pretium lacus posuere quis. Etiam vel enim interdum enim porttitor
+        pretium nec non felis. Phasellus luctus nec lectus vitae venenatis.</p>
+      <p>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras eleifend luctus neque,
+        quis
+        accumsan orci iaculis a. Donec nec porttitor est. Morbi ullamcorper lectus eu libero finibus rhoncus. Etiam non nibh
+        efficitur, interdum nunc id, accumsan dui. Curabitur sit amet sem sed libero sagittis porttitor. Aenean vehicula metus
+        velit, ut tristique mauris tristique in. In porta sapien erat, eget varius libero euismod in. Nam efficitur vulputate
+        massa eu eleifend. Sed condimentum mauris sit amet nibh aliquet, ac molestie quam interdum. Aliquam commodo tortor sit
+        amet risus auctor ullamcorper.</p>
+      <p>
+        Vivamus et magna ipsum. Pellentesque dictum, ante quis faucibus hendrerit, lectus urna imperdiet neque, eu porta quam
+        quam in lectus. Nam elementum molestie orci eget accumsan. Nullam nec nibh vestibulum, facilisis lectus volutpat,
+        rhoncus justo. Maecenas ac cursus justo. Vivamus cursus sem et justo efficitur interdum convallis vehicula purus.
+        Vivamus sed venenatis libero, at accumsan nunc. Aenean eget enim finibus, elementum odio ac, feugiat felis. Fusce
+        gravida est in quam euismod, a consectetur lectus scelerisque. Fusce sit amet dui sed nibh congue euismod. Donec odio
+        sapien, condimentum non malesuada laoreet, euismod quis arcu. Nam eleifend non velit sed posuere. Praesent quis
+        placerat
+        tortor, eu semper ipsum. Donec nunc diam, viverra nec elementum sit amet, egestas id quam.</p>
+      <p>
+        Donec pretium condimentum mi nec maximus. Ut eget luctus mi. Quisque fringilla sem dui, vel condimentum mauris
+        accumsan
+        sit amet. Nulla eu leo quis purus luctus tincidunt. Ut nec porta tellus, egestas tristique ligula. Nam porttitor metus
+        a
+        risus aliquet, vitae scelerisque tortor viverra. In viverra efficitur nulla, at vehicula diam imperdiet ac. Nunc eu
+        massa id ligula hendrerit tempor. Suspendisse potenti. Duis vulputate ligula lorem, eu hendrerit erat tempor feugiat.
+        Suspendisse porttitor rutrum pellentesque.</p>
+      <p>
+        Sed lacinia ex eu felis faucibus, eu finibus ante mattis. Praesent placerat ex non commodo semper. Sed eleifend
+        accumsan
+        arcu ac ullamcorper. In ultrices lorem a elit volutpat sollicitudin. Mauris lectus dui, venenatis eu elementum non,
+        mattis sit amet mi. Curabitur sagittis ante suscipit consequat gravida. Vivamus vel dictum diam. Maecenas id dapibus
+        risus. Praesent mollis, quam quis feugiat posuere, turpis lorem convallis orci, et ultrices sapien elit non nulla.
+        Cras
+        quis tempor eros.</p>
+      <p>
+        Integer pulvinar odio id ipsum imperdiet consectetur a eu est. Nam sodales, magna at iaculis vulputate, quam urna
+        aliquam lectus, quis condimentum augue ante sed ipsum. In semper posuere aliquet. Sed sed mi ut lectus porta
+        pellentesque. Vivamus nec ultrices elit, vitae bibendum est. Mauris semper ante a neque laoreet euismod. In ac neque
+        nec
+        ipsum imperdiet commodo. Cras facilisis felis eu orci commodo ullamcorper. Fusce vestibulum maximus massa, suscipit
+        fermentum felis aliquam tincidunt. Nulla facilisi. Maecenas viverra rutrum mi a dapibus. Pellentesque molestie
+        venenatis
+        est, vitae sollicitudin orci cursus non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+        turpis egestas. Mauris consequat metus mauris, dapibus malesuada nulla ultrices id. Integer laoreet, turpis molestie
+        euismod molestie, neque nibh dapibus erat, id convallis libero nisi id massa.</p>
+      <p>
+        Nullam egestas quam placerat dolor finibus, ac tincidunt dui finibus. Pellentesque habitant morbi tristique senectus
+        et
+        netus et malesuada fames ac turpis egestas. Suspendisse potenti. Sed eget ullamcorper neque, rhoncus tempor enim.
+        Phasellus in sollicitudin neque. Vivamus nec eleifend nibh. Vivamus eu suscipit dui. Quisque nec leo ornare urna
+        maximus
+        euismod. Aenean condimentum tortor a ex hendrerit facilisis. Proin congue malesuada mi, nec pharetra purus feugiat in.
+        Phasellus ut vestibulum nulla. Integer auctor commodo elit, quis lacinia augue porttitor ut. Aenean vel urna est.</p>
+      <p>
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porta justo vitae
+        urna eleifend venenatis. Sed ornare ante eget urna eleifend varius. Mauris ullamcorper scelerisque interdum. Quisque
+        pretium sagittis ante, ut ultricies velit molestie a. Nulla libero lectus, condimentum interdum lacus vitae, auctor
+        aliquam ex. Vestibulum efficitur, nisi ac viverra vestibulum, neque mi auctor ante, et interdum leo sapien ac nibh.
+      </p>
+  </div>
+  <div id="consola"></div>
+  <div id="consola-modal"></div>
+  <div id="notification-modal">
+    <button id="boton-cerrar">x</button>
+    <h2>¿Quieres recibir notificaciones?</h2>
+    <p>
+      <button id="aceptar-notificaciones">Aceptar notficaciones</button>
+      <button id="rechazar-notificaciones">Rechazar notficaciones</button>
+    </p>
+  </div>
+  <script src="js/main.js" type="application/javascript"></script>
+  <script src="js/modal.js" type="application/javascript"></script>
+  <script src="js/app.js" type="application/javascript"></script>
+</body>
+</html>
