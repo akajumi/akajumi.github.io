@@ -1,0 +1,21 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = adimedia.local
+DNS.2 = *.adimedia.local
+DNS.3 = php53.adimedia.local
+DNS.4 = *.php53.adimedia.local
+DNS.5 = k2.adimedia.local
+DNS.6 = *.k2.adimedia.local
+DNS.7 = php56.k2.adimedia.local
+DNS.8 = *.php56.adimedia.local
+DNS.9 = php70.adimedia.local
+DNS.10 = *.php70.adimedia.local
+DNS.11 = php72.adimedia.local
+DNS.12 = *.php72.adimedia.local
+DNS.13 = php74.adimedia.local
+DNS.14 = *.php74.adimedia.local
+DNS.15 = localhost

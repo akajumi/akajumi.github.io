@@ -1,0 +1,20 @@
+{
+  "liveServer.settings.port": 443,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.CustomBrowser": "chrome",
+  // "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome",
+  "liveServer.settings.NoBrowser": false,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.scss",
+    "**/*.sass"
+  ],
+  "liveServer.settings.host": "localhost",
+  "liveServer.settings.https": {
+    "enable": true, //set it true to enable the feature.
+    "cert": "Z:\\jumi\\pwa\\certificados\\php-adimedia-local.crt", //full path
+    "key": "Z:\\jumi\\pwa\\certificados\\php-adimedia-local.key", //full path
+    "passphrase": ""
+  },
+}
