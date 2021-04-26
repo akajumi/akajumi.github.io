@@ -23,7 +23,7 @@ const OFFLINE_URL = "offline.html";
 
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
+self.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the mini-infobar from appearing on mobile
   e.preventDefault();
   // Stash the event so it can be triggered later.
