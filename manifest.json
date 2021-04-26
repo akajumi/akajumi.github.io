@@ -1,9 +1,5 @@
 {
   "background_color": "#0F0",
-  "categories": [
-    "udalak",
-    "berriak"
-  ],
   "description": "Descripción de la DEMO APP",
   "display": "standalone",
   "icons": [
@@ -45,6 +41,7 @@
     }
   ],
   "name": "Demo API notificaciones HTML 5",
+  "prefer_related_applications": false,
   "short_name": "Demo PWA",
   "start_url": "/index.html",
   "theme_color": "#F00",
