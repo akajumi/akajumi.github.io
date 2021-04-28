@@ -43,7 +43,7 @@
   "name": "Demo API notificaciones HTML 5",
   "prefer_related_applications": false,
   "short_name": "Demo PWA",
-  "start_url": "/index.html",
-  "theme_color": "#F00",
+  "start_url": "/pwa.html",
+  "theme_color": "#c00000",
   "gcm_sender_id": "103953800507"
 }
