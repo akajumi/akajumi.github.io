@@ -16,7 +16,7 @@ Copyright 2015, 2019, 2020, 2021 Google LLC. All Rights Reserved.
 // This variable is intentionally declared and unused.
 // Add a comment for your linter if you want:
 // eslint-disable-next-line no-unused-vars
-const OFFLINE_VERSION = 4;
+const OFFLINE_VERSION = 12;
 const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "offline.html";
@@ -58,10 +58,10 @@ self.addEventListener("fetch", (event) => {
       (async () => {
         try {
           // First, try to use the navigation preload response if it's supported.
-          const preloadResponse = await event.preloadResponse;
-          if (preloadResponse) {
-            return preloadResponse;
-          }
+          // const preloadResponse = await event.preloadResponse;
+          // if (preloadResponse) {
+          //   return preloadResponse;
+          // }
 
           // Always try the network first.
           const networkResponse = await fetch(event.request);

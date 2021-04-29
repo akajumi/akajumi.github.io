@@ -8,11 +8,11 @@ const boton_rechazar = document.getElementById('rechazar-notificaciones')
 function modal_on_delay() {
   if (Notification.permission === "granted") {
     mensaje_consola = "<p>Las notificaciones ya han sido aceptadas. NO se mostrará el popup.</p>"
-    consola_modal.innerHTML = mensaje_consola
+    if (consola_modal) consola_modal.innerHTML = mensaje_consola
     return
   } else if (Notification.permission === "denied") {
     mensaje_consola = "<p>Las notificaciones ya han sido rechazadas. NO se mostrará el popup.</p>"
-    consola_modal.innerHTML = mensaje_consola
+    if (consola_modal) consola_modal.innerHTML = mensaje_consola
   } else {
     mensaje_consola = "<p>Las notificaciones no han sido aceptadas o rechazadas. Lanzar popup.</p>"
     consola_modal.innerHTML = mensaje_consola
@@ -29,7 +29,7 @@ function modal_on_delay() {
       }, timeToShowModal);
     } else {
       mensaje_consola = "<p>Las notificaciones no han sido aceptadas o rechazadas.</p><p>Pero se cerro este modal y no ha pasado el tiempo establecido para mostrar el mensaje de nuevo.</p>"
-      consola_modal.innerHTML = mensaje_consola
+      if (consola_modal) consola_modal.innerHTML = mensaje_consola
     }
   }
 }
@@ -42,17 +42,17 @@ function lanzar_solicitud_notificacion_desde_modal() {
   Notification.requestPermission().then(function(permission) {
     if (permission === 'denied') {
       mensaje_consola = "<p>Se ha hecho click en 'Bloquear' las notificaciones.</p>"
-      consola_modal.innerHTML = mensaje_consola
+      if (consola_modal) consola_modal.innerHTML = mensaje_consola
       cerrar_modal_notificaciones()
       return
     } else if (permission === 'default') {
       mensaje_consola = "<p>La ventana de solicitud de permisos se ha cerrado sin hacer click en 'Permitir' o 'Bloquear'.</p>"
-      consola_modal.innerHTML = mensaje_consola
+      if (consola_modal) consola_modal.innerHTML = mensaje_consola
       cerrar_modal_notificaciones()
       return
     }
     mensaje_consola = "<p>Lanzada Notificación de prueba.</p>"
-    consola.innerHTML = mensaje_consola
+    if (consola_modal) consola.innerHTML = mensaje_consola
     const notificacion = new Notification("Lanzada Notificación de prueba.")
     cerrar_modal_notificaciones()
   })
